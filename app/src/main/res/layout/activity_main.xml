@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="@dimen/bean_size"
+        android:layout_height="@dimen/bean_size"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="312dp"
+        android:src="@drawable/bean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/bean_size"
+        android:layout_height="@dimen/bean_size"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="272dp"
+        android:src="@drawable/bean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/bean_size"
+        android:layout_height="@dimen/bean_size"
+        android:layout_marginLeft="168dp"
+        android:layout_marginBottom="548dp"
+        android:src="@drawable/bean"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/bean_size"
+        android:layout_height="@dimen/bean_size"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="276dp"
+        android:src="@drawable/bean"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/bean_size"
+        android:layout_height="@dimen/bean_size"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="96dp"
+        android:src="@drawable/bean"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/starbucks_cup"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="@dimen/large_icon"
+        android:layout_height="@dimen/large_icon"
+        android:layout_margin="@dimen/medium_margin"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/basket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/searchImageButton"
+        android:layout_width="@dimen/large_icon"
+        android:layout_height="@dimen/large_icon"
+        android:layout_margin="@dimen/medium_margin"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_margin"
+        android:text="@string/details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_to_corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_corner"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="@dimen/medium_margin"
+        android:text="@string/add_to_order"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="@dimen/small_button"
+        android:layout_height="@dimen/small_button"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/fully_corner"
+        android:text="@string/plus"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/add_to_corner"
+        app:layout_constraintLeft_toLeftOf="@id/cup_number"
+        app:layout_constraintRight_toLeftOf="@id/add_to_corner"
+        app:layout_constraintTop_toTopOf="@+id/add_to_corner" />
+
+    <TextView
+        android:id="@+id/cup_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/cups_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/add_to_corner"
+        app:layout_constraintEnd_toStartOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/minus"
+        app:layout_constraintTop_toTopOf="@id/add_to_corner" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="@dimen/small_button"
+        android:layout_height="@dimen/small_button"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:background="@drawable/fully_corner"
+        android:text="@string/minus"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/add_to_corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/cup_number"
+        app:layout_constraintTop_toTopOf="@+id/add_to_corner" />
+
+    <TextView
+        android:id="@+id/drink_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/drink_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/_30_00"
+        android:textColor="@color/button_color"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/drink_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/drink_name"
+        app:layout_constraintVertical_bias="0.424" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/best_sales"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/drink_name"
+        app:layout_constraintRight_toRightOf="@id/price"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/size_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/size_options"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drink_name" />
+
+    <ImageView
+        android:id="@+id/tall_cup"
+        android:layout_width="@dimen/cup_size"
+        android:layout_height="@dimen/cup_size"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/size_option"
+        app:srcCompat="@drawable/ic_cup_tall" />
+
+    <ImageView
+        android:id="@+id/grand_cup"
+        android:layout_width="@dimen/cup_size"
+        android:layout_height="@dimen/cup_size"
+        app:layout_constraintBottom_toBottomOf="@id/tall_cup"
+        app:layout_constraintEnd_toStartOf="@+id/venti_cup"
+        app:layout_constraintStart_toEndOf="@+id/tall_cup"
+        app:layout_constraintTop_toTopOf="@id/tall_cup"
+        app:srcCompat="@drawable/ic_cup_grand" />
+
+    <ImageView
+        android:id="@+id/venti_cup"
+        android:layout_width="@dimen/cup_size"
+        android:layout_height="@dimen/cup_size"
+        app:layout_constraintBottom_toBottomOf="@id/grand_cup"
+        app:layout_constraintEnd_toStartOf="@+id/custom_cup"
+        app:layout_constraintStart_toEndOf="@+id/grand_cup"
+        app:layout_constraintTop_toTopOf="@id/grand_cup"
+        app:srcCompat="@drawable/ic_cup_venti" />
+
+    <ImageView
+        android:id="@+id/custom_cup"
+        android:layout_width="@dimen/cup_size"
+        android:layout_height="@dimen/cup_size"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/venti_cup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/venti_cup"
+        app:srcCompat="@drawable/ic_cup_custom" />
+
+    <TextView
+        android:id="@+id/tall_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text_size"
+        android:text="@string/tall"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/tall_cup"
+        app:layout_constraintRight_toRightOf="@id/tall_cup"
+        app:layout_constraintTop_toBottomOf="@id/tall_cup" />
+
+    <TextView
+        android:id="@+id/grande_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        android:text="@string/Grande"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintLeft_toLeftOf="@+id/grand_cup"
+        app:layout_constraintRight_toRightOf="@id/grand_cup"
+        app:layout_constraintTop_toTopOf="@id/tall_text" />
+
+    <TextView
+        android:id="@+id/venti_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/venti"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintLeft_toLeftOf="@id/venti_cup"
+        app:layout_constraintRight_toRightOf="@id/venti_cup"
+        app:layout_constraintTop_toTopOf="@id/tall_text"/>
+
+    <TextView
+        android:id="@+id/custom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/custom"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/custom_cup"
+        app:layout_constraintRight_toRightOf="@id/custom_cup"
+        app:layout_constraintTop_toTopOf="@id/tall_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 FI Oz"
+        android:textSize="@dimen/small_text_size"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        app:layout_constraintLeft_toLeftOf="@+id/tall_text"
+        app:layout_constraintRight_toRightOf="@id/tall_text"
+        app:layout_constraintTop_toBottomOf="@id/tall_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_12_fi_oz"
+        android:textSize="@dimen/small_text_size"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        app:layout_constraintLeft_toLeftOf="@+id/grande_text"
+        app:layout_constraintRight_toRightOf="@id/grande_text"
+        app:layout_constraintTop_toBottomOf="@id/grande_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_16_fi_oz"
+        android:textSize="@dimen/small_text_size"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        app:layout_constraintLeft_toLeftOf="@+id/venti_text"
+        app:layout_constraintRight_toRightOf="@id/venti_text"
+        app:layout_constraintTop_toBottomOf="@id/venti_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fi_oz"
+        android:textSize="@dimen/small_text_size"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/grey"
+        app:layout_constraintLeft_toLeftOf="@+id/custom_text"
+        app:layout_constraintRight_toRightOf="@id/custom_text"
+        app:layout_constraintTop_toBottomOf="@id/custom_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

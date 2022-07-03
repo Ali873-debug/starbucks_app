@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ConstraintLayout" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/button_color</item>
+        <item name="colorPrimaryVariant">@color/button_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="CupName">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="CupSizeText">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+</resources>
